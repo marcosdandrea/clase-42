@@ -16,14 +16,14 @@ async function editProduct(product) {
     const index = memory.findIndex (item => item.productID === product.productID)
     if (index == -1) throw new Error("Item not found")
     memory[index] = {...product}
-    return "Ok"
+    return product.productID
 }
 
 async function deleteProduct(id) {
     const index = memory.findIndex (item => item.productID === id)
     if (index == -1) throw new Error("Item not found")
     memory.splice(index, 1)
-    return "Ok"
+    return product.productID
 }
 
 
